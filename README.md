@@ -38,4 +38,12 @@ PSCamera also gives you an easy way to switch cameras, using `switchCameras()`:
 camera.switchCameras {(error) in
   //completion block
 }
+=======
+wrapper class around AVFoundation, to allow easy creation of custom cameras on iOS
+
+# Usage
+First, start by declaring an instance of PSCamera to use in your app:
+
+```Swift
+let camera = PSCamera
 ```
