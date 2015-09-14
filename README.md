@@ -11,7 +11,7 @@ let camera = PSCamera()
 Then, call `loadCaptureSession()` on the instance you created. This will set up an AVCaptureSession, along with the appropriate inputs and outputs, to create a fully functional photo capture session. This isn't done in `init()` as it's a slightly expensive operation:
 
 ```Swift
-camera.loadCaptureSession(quality: AVCaptureSessionPresetHigh, backCameraFocusMode: .AutoFocus) {(error) in
+camera.loadCaptureSessionWithQuality(AVCaptureSessionPresetHigh, backCameraFocusMode: .AutoFocus) {(error) in
   //completion block
 }
 ```
@@ -38,12 +38,6 @@ PSCamera also gives you an easy way to switch cameras, using `switchCameras()`:
 camera.switchCameras {(error) in
   //completion block
 }
-=======
-wrapper class around AVFoundation, to allow easy creation of custom cameras on iOS
-
-# Usage
-First, start by declaring an instance of PSCamera to use in your app:
-
-```Swift
-let camera = PSCamera
 ```
+
+That's all! Enjoy.
